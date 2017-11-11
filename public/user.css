@@ -1,0 +1,10 @@
+html {
+ font-family: 'Cuprum', sans-serif;
+ color: black;
+ text-transform: uppercase;
+ background-color: white;
+}
+
+a {
+  color: pink;
+}

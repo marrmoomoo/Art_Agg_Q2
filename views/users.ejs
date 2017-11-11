@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--jquery cdn-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
+  <link rel="stylesheet" href="/users.css">
+  <title>ARTAGGERS</title>
+</head>
+<body>
+
+
+
+  <nav>
+      <div class="nav-wrapper white">
+        <a href="/sign_up" class="brand-logo">Art-Agg</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/users">Art-Aggers</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+<div class="container">
+
+  <h1>Art-Aggers</h1>
+
+<ul>
+  <% for (var i = 0; i < users.length; i++) { %>
+    <li>
+      <a href="/users/<%=users[i].id%>">
+        <%=users[i].username%>
+      </a>
+    </li>
+  <% } %>
+</ul>
+
+
+
+</div>
+
+</body>
+</html>

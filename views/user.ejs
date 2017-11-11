@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
+  <link rel="stylesheet" href="/user.css">
+  <title>ARTAGGER</title>
+</head>
+
+<body>
+
+  <nav>
+      <div class="nav-wrapper black">
+        <a href="/sign_up" class="brand-logo">Art-Agg</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/users">Art-Aggers</a></li>
+        </ul>
+      </div>
+    </nav>
+
+<div class="container">
+  <h1>Art-Agger >> <%=user.username%></h1>
+  <ul>
+    <li>First Name: <%= user.fname %></li>
+    <li>Last Name: <%= user.lname %></li>
+    <li>City: <%= user.city %></li>
+    <li>State: <%= user.state %></li>
+    <li>Bio: <%= user.bio %></li>
+  </ul>
+
+
+<h2>+ Behance</h2>
+<form action="/users/<%=user.id%>/behance" method="post">
+  <input type="text" name="behance_username" placeholder="Please add BEHANCE username">
+  <input type="submit">
+</form>
+
+  <h2>Behance Acct.(s)</h2>
+
+  <ul>
+    <% for(var i = 0; i < behance_accounts.length; i++) { %>
+      <li>
+        <a href="/behance_users/<%=behance_accounts[i].user_id%>/<%=behance_accounts[i].behance_username%>"> <%=behance_accounts[i].behance_username%></a>
+      </li>
+     <% } %>
+  </ul>
+
+  <h2>+ Unsplash</h2>
+  <form action="/users/<%=user.id%>/unsplash" method="post">
+    <input type="text" name="unsplash_username" placeholder="Please add UNSPLASH username">
+    <input type="submit">
+  </form>
+
+  <h2>Unsplash Acct.(s)</h2>
+
+  <ul>
+      <% for(var l = 0; l < unsplash_accounts.length; l++) { %>
+      <li>
+          <a href="/unsplash_users/<%=unsplash_accounts[l].user_id%>/<%=unsplash_accounts[l].unsplash_username%>"> <%=unsplash_accounts[l].unsplash_username%>
+          </a>
+      </li>
+     <% } %>
+  </ul>
+
+</div>
+</body>
+
+</html>

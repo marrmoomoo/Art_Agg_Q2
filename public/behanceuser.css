@@ -1,0 +1,46 @@
+html {
+ font-family: 'Cuprum', sans-serif;
+ text-transform: uppercase;
+ background-color: black;
+}
+
+nav .brand-logo {
+  color: black;
+}
+
+nav ul a {
+  color: black;
+}
+
+.card-title {
+  /*width: 100%;*/
+  top: 0;
+  bottom: auto !important;
+  text-align: left;
+  padding: 10px;
+}
+
+.card-title a {
+  color: pink;
+}
+
+.card-content {
+  /*border-top: 1px solid rgba(160,160,160,0.2);
+  border-left: 1px solid rgba(160,160,160,0.2);
+  border-right: 1px solid rgba(160,160,160,0.2);*/
+}
+.card-action {
+  border-top: none !important;
+  /*border-left: 1px solid rgba(160,160,160,0.2);
+  border-top: 1px solid rgba(160,160,160,0.2);
+  border-right: 1px solid rgba(160,160,160,0.2);
+  border-bottom: 1px solid rgba(160,160,160,0.2);*/
+}
+
+.card-content a {
+  color: white;
+}
+
+a {
+  color: pink;
+}

@@ -1,0 +1,20 @@
+html {
+  font-family: 'Cuprum', sans-serif;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+}
+
+nav .brand-logo {
+  color: black;
+}
+
+nav ul a {
+  color: black;
+}
+
+form {
+  background: url(https://media.giphy.com/media/l0EoBjgMDnaUms5CU/giphy.gif);
+  padding: 2em;
+  color: black;
+}

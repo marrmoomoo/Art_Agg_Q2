@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Unsplash Projects</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/users">All Unsplash Users</a></li>
+        </ul>
+      </div>
+    </nav>
+
+<div class="container">
+  <% for (var i = 0; i < unsplash.length; i++) { %>
+    <div class="row">
+      <div class="col s12 m7">
+        <div class="card">
+          <div class="card-image">
+          <a href="<%=unsplash[i].photos[0].links.html%>">
+            <img src="<%=unsplash[i].photos[0].urls.raw%>"/>
+          </a>
+          <span class="card-title">
+          <a  href="<%=unsplash[i].links.html%>"><%=unsplash.name%>
+          </a>
+          </span>
+          </div>
+          <div class="card-content">
+            <p>
+              <a href="<%=unsplash[i].links.html%>"><%=unsplash.username%></a>
+            </p>
+          </div>
+          <div class="card-action">
+            <%=unsplash[i].keywords.photos[2]%>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  <% } %>
+</div>
+
+</body>
+
+</html>

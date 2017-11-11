@@ -1,0 +1,18 @@
+html {
+ font-family: 'Cuprum', sans-serif;
+ color: white;
+ text-transform: uppercase;
+ background-color: black;
+}
+
+nav .brand-logo {
+  color: black;
+}
+
+nav ul a {
+  color: black;
+}
+
+a {
+  color: pink;
+}
